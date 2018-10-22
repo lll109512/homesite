@@ -6,17 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Xingyu Li's Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
     <nav class="blue-grey darken-3">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Black Paper</a>
+            <a href="#" class="brand-logo center">Black Papers</a>
             <ul id="nav-mobile " class="right hide-on-med-and-down">
                 <li><a href="sass.html">Message board</a></li>
             </ul>
@@ -25,7 +23,7 @@
 
 
     <div class="parallax-container">
-      <div class="parallax"><img src="images/parallax1.jpg"></div>
+      <div class="parallax"><img src="{{ url_for('static',filename='img/image1.png') }}"></div>
     </div>
     <div class="section white">
       <div class="row container">
@@ -34,9 +32,16 @@
       </div>
     </div>
     <div class="parallax-container">
-      <div class="parallax"><img src="images/parallax2.jpg"></div>
+      <div class="parallax"><img src="{{ url_for('static',filename='img/image2.jpg') }}"></div>
     </div>
         
 </body>
+<script>
+
+  $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+        
+</script>
 
 </html>
