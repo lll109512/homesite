@@ -1,0 +1,13 @@
+image: node-image
+
+install:
+  -  python3 -m venv venv
+  -  . venv/bin/activate
+  -  pip install -r requirements.txt
+
+script:
+  - . venv/bin/activate
+  -  pytest
+
+cache:
+  - node_modules
