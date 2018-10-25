@@ -12,7 +12,7 @@ install:
 
 script:
   -  . venv/bin/activate
-  -  pytest
+  -  python3 -m pytest
 
 cache:
   - ./venv
