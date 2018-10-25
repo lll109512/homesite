@@ -1,5 +1,8 @@
 image: node-image
 
+matrix:
+  - env: c=1
+
 install:
   -  python3 -m venv venv
   -  . venv/bin/activate
@@ -10,4 +13,4 @@ script:
   -  pytest
 
 cache:
-  - node_modules
+  - python_model
