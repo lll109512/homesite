@@ -6,4 +6,4 @@ import sure
 
 def test_home(client):
     res = client.get('/')
-    (res.status_code).should.equal(200)
+    (res.status_code).should.equal(201)
